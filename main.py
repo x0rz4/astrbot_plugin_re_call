@@ -1,8 +1,10 @@
 import asyncio
 
 from aiocqhttp import CQHttp
+
+from astrbot.api import logger
 from astrbot.api.event import filter
-from astrbot.api.star import Context, Star, register
+from astrbot.api.star import Context, Star
 from astrbot.core import AstrBotConfig
 from astrbot.core.message.components import (
     At,
@@ -15,21 +17,12 @@ from astrbot.core.message.components import (
     Reply,
     Video,
 )
-from astrbot.api import logger
-
 from astrbot.core.message.message_event_result import MessageChain
 from astrbot.core.platform.sources.aiocqhttp.aiocqhttp_message_event import (
     AiocqhttpMessageEvent,
 )
 
 
-@register(
-    "astrbot_plugin_recall",
-    "Zhalslar",
-    "智能撤回插件，可自动判断各场景下消息是否需要撤回",
-    "v1.0.1",
-    "https://github.com/Zhalslar/astrbot_plugin_recall",
-)
 class RecallPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -87,10 +80,15 @@ class RecallPlugin(Star):
             and group_id not in self.conf["group_whitelist"]
         ):
             return
-        chain = event.get_result().chain
+        result = event.get_result()
+        if not result:
+            return
+        chain = result.chain
+        if not chain:
+            return
         # 无有效消息段直接退出
         if not any(
-            isinstance(seg, (Plain, Image, Video, Face, At, AtAll, Forward, Reply))
+            isinstance(seg, Plain | Image | Video | Face | At | AtAll | Forward | Reply)
             for seg in chain
         ):
             return

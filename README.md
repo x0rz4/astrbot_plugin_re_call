@@ -5,14 +5,17 @@
 
 # astrbot_plugin_recall
 
-_✨ [astrbot](https://github.com/AstrBotDevs/AstrBot) 撤回插件 ✨_  
+_✨ 撤回插件 ✨_  
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![AstrBot](https://img.shields.io/badge/AstrBot-3.4%2B-orange.svg)](https://github.com/Soulter/AstrBot)
+[![AstrBot](https://img.shields.io/badge/AstrBot-4.0%2B-orange.svg)](https://github.com/Soulter/AstrBot)
 [![GitHub](https://img.shields.io/badge/作者-Zhalslar-blue)](https://github.com/Zhalslar)
 
 </div>
+
+> **warning**:  
+> 本插件已停止更新维护，相关功能已整合到另一个插件：[输出增强](https://github.com/Zhalslar/astrbot_plugin_outputpro)
 
 ## 🤝 介绍
 
@@ -20,17 +23,7 @@ _✨ [astrbot](https://github.com/AstrBotDevs/AstrBot) 撤回插件 ✨_
 
 ## 📦 安装
 
-- 直接在astrbot的插件市场搜索astrbot_plugin_recall，点击安装，等待完成即可
-
-- 也可以克隆源码到插件文件夹：
-
-```bash
-# 克隆仓库到插件目录
-cd /AstrBot/data/plugins
-git clone https://github.com/Zhalslar/astrbot_plugin_recall
-
-# 控制台重启AstrBot
-```
+在astrbot的插件市场搜索astrbot_plugin_recall，点击安装即可
 
 ## ⌨️ 配置
 
