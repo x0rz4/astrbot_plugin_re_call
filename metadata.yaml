@@ -4,4 +4,4 @@ desc: 自动判断并撤回长文本、复读词、报错等
 help: 略
 version: v1.0.0
 author: x0rz4
-repo: https://github.com/Zhalslar/astrbot_plugin_re_call
+repo: https://github.com/x0rz4/astrbot_plugin_re_call
