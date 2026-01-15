@@ -1,6 +1,6 @@
 name: astrbot_plugin_re_call
 display_name: 简单智能撤回
-desc: 自动判断并撤回长文本、复读词、违禁词、报错等
+desc: 自动判断并撤回长文本、复读词、报错等
 help: 略
 version: v1.0.0
 author: x0rz4
